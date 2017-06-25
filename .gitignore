@@ -1,0 +1,24 @@
+# IDE
+.idea
+nbproject
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# Mac DS_Store Files
+.DS_Store
+
+# image
+image/*
+
+# config
+config.php
+
+# cache
+cache/*
+
+# log
+log/*
