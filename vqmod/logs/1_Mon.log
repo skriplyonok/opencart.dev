@@ -1,0 +1,12 @@
+---------- Date: 2017-06-26 01:21:55 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/
+VQMod::_parseMods - FILE "C:\OpenServer\domains\opencart.dev\vqmod/xml/a_vqmod_d_social_login.xml" REQUIRES VQMOD "2.5.0" OR ABOVE AND HAS BEEN SKIPPED
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-06-26 01:22:31 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=extension/module&token=vN7S1ytrw5PnS9uwTnN05gjlq90Ka17V
+VQMod::_parseMods - FILE "C:\OpenServer\domains\opencart.dev\vqmod/xml/a_vqmod_d_social_login.xml" REQUIRES VQMOD "2.5.0" OR ABOVE AND HAS BEEN SKIPPED
+----------------------------------------------------------------------
+
+
