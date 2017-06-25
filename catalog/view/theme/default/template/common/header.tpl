@@ -114,5 +114,6 @@
       </ul>
     </div>
   </nav>
+  <?php echo $header_bottom; ?>
 </div>
 <?php } ?>
