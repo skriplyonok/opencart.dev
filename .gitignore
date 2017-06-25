@@ -18,7 +18,7 @@ image/*
 config.php
 
 # cache
-cache/*
+/system/storage/cache/*
 
 # log
-log/*
+/system/storage/logs/*
