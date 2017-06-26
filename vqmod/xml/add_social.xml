@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <id>add_social</id>
+    <version>2.x</version>
+    <vqmver required="true">2.4.1</vqmver>
+    <author>Dmitry</author>
+
+    <file name="catalog/view/theme/default/template/common/currency.tpl">
+        <operation>
+            <search position="replace"><![CDATA[pull-left]]></search>
+            <add><![CDATA[header-currency]]></add>
+        </operation>
+    </file>
+    <file name="catalog/view/theme/default/template/common/language.tpl">
+        <operation>
+            <search position="replace"><![CDATA[pull-left]]></search>
+            <add><![CDATA[header-language]]></add>
+        </operation>
+    </file>
+    <file name="catalog/view/theme/default/template/common/header.tpl">
+        <operation>
+            <search position="after" index="1"><![CDATA[<div class="container">]]></search>
+            <add><![CDATA[<div id="header-top-left" class="pull-left">]]></add>
+        </operation>
+        <operation>
+            <search position="after" index="1"><![CDATA[<?php echo $language; ?>]]></search>
+            <add><![CDATA[<?php echo $header_top; ?></div>]]></add>
+        </operation>
+    </file>
+    <file name="catalog/controller/common/header.php">
+        <operation>
+            <search position="after"><![CDATA[$data['direction'] = $this->language->get('direction');]]></search>
+            <add><![CDATA[$data['header_top'] = $this->load->controller('common/header_top');]]></add>
+        </operation>
+    </file>
+    <file name="catalog/controller/common/home.php">
+        <operation>
+            <search position="after"><![CDATA[$data['content_bottom'] = $this->load->controller('common/content_bottom');]]></search>
+            <add><![CDATA[$data['header_top'] = $this->load->controller('common/header_top');]]></add>
+        </operation>
+    </file>
+    <file name="admin/controller/design/layout.php">
+        <operation>
+            <search position="after"><![CDATA[$data['text_column_right'] = $this->language->get('text_column_right');]]></search>
+            <add><![CDATA[$data['text_header_top'] = $this->language->get('text_header_top');]]></add>
+        </operation>
+    </file>
+    <file name="admin/language/english/design/layout.php">
+        <operation>
+            <search position="after"><![CDATA[$_['text_column_right']   = 'Column Right';]]></search>
+            <add><![CDATA[$_['text_header_top']     = 'Header Top';]]></add>
+        </operation>
+    </file>
+    <file name="admin/view/template/design/layout_form.php">
+        <operation>
+            <search position="after"><![CDATA[html += '    <option value="content_top"><?php echo $text_content_top; ?></option>';]]></search>
+            <add><![CDATA[html += '    <option value="header_top"><?php echo $text_header_top; ?></option>';]]></add>
+        </operation>
+    </file>
+
+</modification>

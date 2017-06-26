@@ -124,10 +124,10 @@
                     <?php } else { ?>
                     <option value="column_right"><?php echo $text_column_right; ?></option>
                     <?php } ?>
-                    <?php if ($layout_module['position'] == 'header_bottom') { ?>
-                    <option value="header_bottom" selected="selected"><?php echo $text_header_bottom; ?></option>
+                    <?php if ($layout_module['position'] == 'header_top') { ?>
+                    <option value="header_top" selected="selected"><?php echo $text_header_top; ?></option>
                     <?php } else { ?>
-                    <option value="header_bottom"><?php echo $text_header_bottom; ?></option>
+                    <option value="header_top"><?php echo $text_header_top; ?></option>
                     <?php } ?>
                   </select></td>
                 <td class="text-right"><input type="text" name="layout_module[<?php echo $module_row; ?>][sort_order]" value="<?php echo $layout_module['sort_order']; ?>" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>
@@ -186,7 +186,6 @@ function addModule() {
     html += '  </select></td>'; 
 	html += '  <td class="text-left"><select name="layout_module[' + module_row + '][position]" class="form-control">';
     html += '    <option value="content_top"><?php echo $text_content_top; ?></option>';
-    html += '    <option value="header_bottom"><?php echo $text_header_bottom; ?></option>';
     html += '    <option value="content_bottom"><?php echo $text_content_bottom; ?></option>';
     html += '    <option value="column_left"><?php echo $text_column_left; ?></option>';
     html += '    <option value="column_right"><?php echo $text_column_right; ?></option>';

@@ -745,3 +745,8 @@ h2.price {
     background-image: none;
     background-color: #df5c39;
 }
+
+/* Display elements inline-block in pull-left in top header */
+#header-top-left > div {
+	display: inline-block;
+}

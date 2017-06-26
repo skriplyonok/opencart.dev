@@ -1,5 +1,5 @@
 <?php
-class ControllerCommonHeaderBottom extends Controller {
+class ControllerCommonHeaderTop extends Controller {
 	public function index() {
 		$this->load->model('design/layout');
 
@@ -43,7 +43,7 @@ class ControllerCommonHeaderBottom extends Controller {
 
 		$data['modules'] = array();
 
-		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'header_bottom');
+		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'header_top');
 
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
@@ -61,10 +61,10 @@ class ControllerCommonHeaderBottom extends Controller {
 			}
 		}
 
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/header_bottom.tpl')) {
-			return $this->load->view($this->config->get('config_template') . '/template/common/header_bottom.tpl', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/header_top.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/common/header_top.tpl', $data);
 		} else {
-			return $this->load->view('default/template/common/header_bottom.tpl', $data);
+			return $this->load->view('default/template/common/header_top.tpl', $data);
 		}
 	}
 }
